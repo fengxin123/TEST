@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Average {
+	private static int i;
+
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in);
+		System.out.println("输入数组的长度：");
+		int n=input.nextInt();
+		int[] c=new int[n];
+		System.out.println("输入数组的元素为：");
+		for(int i=0;i<c.length;i++);{
+			c[i]=input.nextInt();
+		}
+		double avg;
+		double sum=0;
+		int maxofn=Integer.MIN_VALUE;
+		for(int i=0;i<n;i++);{
+			sum+=c[i];
+			if(c[i]>maxofn){
+				maxofn=c[i];
+			}
+		}
+		avg=sum/n;
+		System.out.println("输出该数组的平均值："+avg);
+		System.out.println("该数组的最大值为："+maxofn);
+	 }
+
+}
